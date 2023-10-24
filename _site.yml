@@ -1,5 +1,7 @@
 name: "P8105 HW4"
-output_dir: 
+favicon: 
+ - icon: fa-github fa-lg
+output_dir: "."
 navbar:
   title: "Home"
   right:
@@ -17,4 +19,6 @@ navbar:
       href: http://github.com/Tptrix29/
 output:
   html_document:
+    includes: 
+      in_header: "icon.html"
     theme: cosmo
