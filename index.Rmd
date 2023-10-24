@@ -1,0 +1,17 @@
+---
+title: "Personal Page"
+author: "Pei Tian, pt2632"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output: 
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+
+---
+
+# Introduction
+
+# Experience
+
+# Contacts

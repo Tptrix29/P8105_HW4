@@ -1,0 +1,18 @@
+name: "P8105 HW4"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Topics"
+      menu: 
+      - text: A part
+      - text: B part
+    - icon: fa-envelope fa-lg
+      href: mailto:pei.tian@columbia.com
+    - icon: fa-github fa-lg
+      href: http://github.com/Tptrix29/
+output:
+  html_document:
+    theme: cosmo
