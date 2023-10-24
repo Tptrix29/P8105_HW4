@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Dashboard Visualization"
 author: "Pei Tian, pt2632"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output: 
@@ -10,6 +10,8 @@ output:
 
 ---
 
-# Introduction
+# Dataset
 
-# Contents
+# Analysis
+
+# Visualization

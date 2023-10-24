@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Experience"
 author: "Pei Tian, pt2632"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output: 
@@ -10,6 +10,10 @@ output:
 
 ---
 
-# Introduction
+# Personal 
 
-# Contents
+# Academic Experience
+
+# Professional Experience
+
+# Open-source Projects
