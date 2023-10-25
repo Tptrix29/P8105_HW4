@@ -36,7 +36,7 @@ ny_noaa |>
 Column {data-width=400}
 -----------------------------------------------------------------------
 
-### Precipitation amount barplot for stations with top 5 records
+### Precipitation amount barplot for stations with top 5 record count
 
 ```{r}
 ny_noaa |>
@@ -49,7 +49,7 @@ ny_noaa |>
   plot_ly(y = ~prcp, color = ~id, type = "box", colors = "viridis")
 ```
 
-### Monthly mean precipitation amount for stations with top 5 records in 21st century
+### Monthly mean precipitation amount for stations with top 3 record count in 21st century
 
 ```{r}
 line_plot = ny_noaa |>
