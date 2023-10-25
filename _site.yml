@@ -16,7 +16,7 @@ navbar:
     - icon: fa-envelope fa-lg
       href: mailto:pei.tian@columbia.com
     - icon: fa-github fa-lg
-      href: http://github.com/Tptrix29/
+      href: https://github.com/Tptrix29/P8105_HW4
 output:
   html_document:
     includes: 

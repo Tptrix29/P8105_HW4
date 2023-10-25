@@ -15,6 +15,6 @@ This is webpage for HW4 of P8105, Data Science I.
 ### Contents
 - [Resume Page](resume.html): Personal Webpage
 
-- [Dashboard Page](resume.html): flexdashboard for dataset visualization
+- [Dashboard Page](dashboard-part.html): flexdashboard for dataset visualization
 
 

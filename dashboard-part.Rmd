@@ -1,21 +1,94 @@
 ---
 title: "Dashboard Visualization"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
+date: "Last Update: `r format(Sys.time(), '%Y-%m-%d')`"
 output: 
-  html_document:
-    theme: cosmo
-    toc: true
-    toc_float: true
-
+  flexdashboard::flex_dashboard
 ---
-
-# Dataset
-
-
-# Analysis
-Goals: 
-## Library Import
-
 
 
 # Visualization
+```{r include=FALSE}
+# Library & Dataset Import
+library(tidyverse)
+library(plotly)
+library(flexdashboard)
+
+library(p8105.datasets)
+```
+
+```{r}
+data("ny_noaa")
+```
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Record count of each station
+
+```{r}
+ny_noaa |>
+  drop_na() |>
+  count(id) |>
+  mutate(id = fct_reorder(id, n)) |>
+  plot_ly(x = ~id, y = ~n, color = ~id, type = "bar", colors = "viridis") 
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+### Precipitation amount barplot for stations with top 5 records
+
+```{r}
+ny_noaa |>
+  drop_na() |> 
+  filter(
+    id %in% c("USW00094789", "USW00014732", "USW00014771", "USW00014768", "USW00004725"), 
+    prcp > 0
+  ) |>
+  mutate(id = fct_reorder(id, prcp)) |>
+  plot_ly(y = ~prcp, color = ~id, type = "box", colors = "viridis")
+```
+
+### Monthly mean precipitation amount for stations with top 5 records in 21st century
+
+```{r}
+line_plot = ny_noaa |>
+  drop_na() |> 
+  filter(
+    id %in% c("USW00094789", "USW00014732", "USW00014771"),
+    year(date) >= 2000) |>
+  mutate(year = year(date), month = month(date)) |>
+  group_by(year, month, id) |>
+  summarise(mean_prcp_monthly = mean(prcp)) |> 
+  mutate(time_tick = ym(paste(year, month, sep = '-'))) |>
+  ggplot(aes(x = time_tick, y = mean_prcp_monthly, color = id)) + 
+  geom_line(alpha = .6) + 
+  theme_bw() +
+  labs(x = "Time", y = "Monthly Precipitation")
+
+ggplotly(line_plot)
+```
+# Supplemental Information
+**Data**: The National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI) provides public access to some weather data, including the GHCN (Global Historical Climatology Network)-Daily database of summary statistics from weather stations around the world.
+
+**Variables**:
+
+- `id`: Weather station ID
+
+- `date`: Date of observation
+
+- `prcp`: Precipitation (tenths of mm)
+
+- `snow`: Snowfall (mm)
+
+- `snwd`: Snow depth (mm)
+
+- `tmax`: Maximum temperature (tenths of degrees C)
+
+- `tmin`: Minimum temperature (tenths of degrees C)
+
+# Other Pages
+- [Home Page](index.html): home page
+- [Resume Page](resume.html): Resume webpage
+
+- [Dashboard Page](dashboard-part.html): flexdashboard for visualization
