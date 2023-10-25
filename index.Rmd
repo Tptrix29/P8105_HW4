@@ -17,4 +17,5 @@ This is webpage for HW4 of P8105, Data Science I.
 
 - [Dashboard Page](dashboard-part.html): flexdashboard for dataset visualization
 
-<img src="https://p8105.com/images/p8105_stickers.png" >
+<hr>
+<center><img src="https://p8105.com/images/p8105_stickers.png" style="width:40%;"></center>
