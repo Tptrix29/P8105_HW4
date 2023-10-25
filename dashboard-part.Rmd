@@ -1,6 +1,5 @@
 ---
 title: "Dashboard Visualization"
-author: "Pei Tian, pt2632"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output: 
   html_document:
@@ -12,6 +11,11 @@ output:
 
 # Dataset
 
+
 # Analysis
+Goals: 
+## Library Import
+
+
 
 # Visualization
