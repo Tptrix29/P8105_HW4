@@ -1,0 +1,21 @@
+---
+title: "Home"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output: 
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+
+---
+
+### Introduction
+This is webpage for HW4 of P8105, Data Science I.
+
+### Contents
+- [Resume Page](resume.html): Personal Webpage
+
+- [Dashboard Page](dashboard-part.html): flexdashboard for dataset visualization
+
+<hr>
+<center><img src="https://p8105.com/images/p8105_stickers.png" style="width:40%;"></center>
