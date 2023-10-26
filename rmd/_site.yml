@@ -1,7 +1,7 @@
 name: "P8105 HW4"
 favicon: 
  - icon: fa-github fa-lg
-output_dir: "../build/"
+output_dir: "../docs/"
 navbar:
   title: "Home"
   right:

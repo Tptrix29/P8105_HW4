@@ -5,6 +5,10 @@ output:
   flexdashboard::flex_dashboard
 ---
 
+```{r render, eval = FALSE}
+# Render Command
+rmarkdown::render("dashboard-part.Rmd", output_format = "flexdashboard::flex_dashboard", output_dir = "../docs/")
+```
 
 # Visualization
 ```{r include=FALSE}
@@ -86,6 +90,7 @@ ggplotly(line_plot)
 - `tmax`: Maximum temperature (tenths of degrees C)
 
 - `tmin`: Minimum temperature (tenths of degrees C)
+
 
 # Other Pages
 - [Home Page](index.html): home page
