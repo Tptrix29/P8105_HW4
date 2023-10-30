@@ -95,5 +95,5 @@ PyTorch, SpringMVC, React, Docker
 
 <hr>
 
-<a href="./CV - Pei Tian V2023.pdf" download>Download PDF Resume Here</a>
+<a href="./static/CV - Pei Tian V2023.pdf" download>Download PDF Resume Here</a>
 
