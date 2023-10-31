@@ -2,9 +2,8 @@
 Homework Repo for Data Science Course
 
 ## Repo Structure
-- `docs`: rendered `html` files for page building 
+- `docs`: rendered `html` files & static files for page building
 - `html`: raw `html` files
-- `static`: static resources
 - `rmd`: raw `Rmd` files
 
 ## Page Entrance
